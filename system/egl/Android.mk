@@ -24,7 +24,11 @@ LOCAL_HEADER_LIBRARIES += libnativebase_headers
 endif
 
 # Used to access the Bionic private OpenGL TLS slot
-LOCAL_C_INCLUDES += bionic/libc/private
+LOCAL_C_INCLUDES := \
+    bionic/libc/private \
+    frameworks/native/libs/nativewindow/include \
+    frameworks/native/libs/arect/include \
+    frameworks/native/libs/nativebase/include
 
 $(call emugl-end-module)
 
